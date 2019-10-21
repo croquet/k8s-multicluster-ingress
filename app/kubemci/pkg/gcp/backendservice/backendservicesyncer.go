@@ -268,7 +268,7 @@ func (b *Syncer) desiredBackendService(lbName string, port ingressbe.ServicePort
 		Kind:                "compute#backendService",
 		LoadBalancingScheme: "EXTERNAL",
 		SessionAffinity:     "NONE",
-		TimeoutSec:          30,
+		TimeoutSec:          3000000, // was 30 (changed for -croquet)
 	}
 }
 
